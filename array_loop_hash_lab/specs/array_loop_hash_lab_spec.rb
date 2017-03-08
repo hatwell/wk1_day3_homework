@@ -31,17 +31,30 @@ class My_Functions < MiniTest::Test
     total_2 = sum_array([])
     total_3 = sum_array([0])
     assert_equal(total_1, 6)
-    assert_nil(total_2)
+    assert_equal(0, total_2)
     assert_equal(total_3, 0)
   end
 
   def test_capitals_array
+    countries = {
+      uk: {
+        capital: 'London',
+        population: 60
+      },
+      france: {
+        capital: 'Paris',
+        population: 70
+      },
+      italy: {
+        capital: 'Rome',
+        population: 56
+      }
+    }
 
+    actual = show_capitals(countries)
+    expected = [ 'London', 'Paris', 'Rome' ]
+    assert_equal(expected, actual)
   end
-
-
-
-
 
 
 

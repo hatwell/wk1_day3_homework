@@ -19,6 +19,17 @@ class My_Functions < MiniTest::Test
     assert_equal(false, item_presence_2)
   end
 
+  def test_return_first_key_name_from_hash
+    key_name_1 = first_key_name({:caroline => "bear"})
+    key_name_2 = first_key_name({})
+    assert_equal(key_name_1, :caroline)
+    assert_equal(key_name_2, nil)
+  end
+
+
+
+
+
 
 
 end

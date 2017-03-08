@@ -23,10 +23,21 @@ class My_Functions < MiniTest::Test
     key_name_1 = first_key_name({:caroline => "bear"})
     key_name_2 = first_key_name({})
     assert_equal(key_name_1, :caroline)
-    assert_equal(key_name_2, nil)
+    assert_nil(key_name_2)
   end
 
+  def test_sum_total_of_array
+    total_1 = sum_array([1,2,3])
+    total_2 = sum_array([])
+    total_3 = sum_array([0])
+    assert_equal(total_1, 6)
+    assert_nil(total_2)
+    assert_equal(total_3, 0)
+  end
 
+  def test_capitals_array
+
+  end
 
 
 

@@ -5,3 +5,7 @@ end
 def find_item(item, array)
    array.include?(item)
 end
+
+def first_key_name(hash)
+  return hash.keys[0]
+end
